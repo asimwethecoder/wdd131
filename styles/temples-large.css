@@ -1,0 +1,29 @@
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    nav {
+        position: static;
+        display: block;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation li a {
+        border-top: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    /* Grid layout changes to 3 columns on larger viewports */
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
