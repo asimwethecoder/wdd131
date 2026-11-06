@@ -44,22 +44,25 @@ header h1 {
     content: "✖";
 }
 
-/* Navigation List (Hidden by default on mobile) */
+/* Navigation Element with explicit display: flex */
 nav {
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background-color: #1b263b;
-    display: none;
+    display: none; /* Controlled by JS toggle on mobile */
 }
 
 nav.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation {
     list-style: none;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -71,6 +74,7 @@ nav.open {
     text-decoration: none;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .navigation li a:hover,
