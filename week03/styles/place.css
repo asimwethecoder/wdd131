@@ -52,6 +52,7 @@ main {
     height: auto;
     display: block;
     border-radius: 6px;
+    object-fit: cover;
 }
 
 .card {
@@ -104,6 +105,11 @@ footer p {
     margin: 0.25rem 0;
 }
 
+/* Pseudo-element rule for weather card heading */
+.weather-card h2::after {
+    content: " ⛅";
+}
+
 /* Wider / Desktop View Layout */
 @media screen and (min-width: 650px) {
     main {
@@ -113,7 +119,6 @@ footer p {
         display: block;
     }
 
-    /* Give the hero container a fixed height so absolute cards stay contained */
     .hero {
         width: 100%;
         height: 520px; 
@@ -126,7 +131,6 @@ footer p {
         border-radius: 6px;
     }
 
-    /* Position Data card over the top-left of the hero image */
     .data-card {
         position: absolute;
         top: 2rem;
@@ -135,7 +139,6 @@ footer p {
         z-index: 2;
     }
 
-    /* Position Weather card over the bottom-right of the hero image */
     .weather-card {
         position: absolute;
         bottom: 2rem;
@@ -144,14 +147,7 @@ footer p {
         z-index: 2;
     }
 
-    /* Hide mobile SVG icon in wide view */
     .weather-icon-mobile {
         display: none;
-    }
-
-    /* Pseudo-element for wider view weather heading emoji */
-    .weather-card h2::after {
-        content: " ⛅";
-        font-size: 1.2rem;
     }
 }

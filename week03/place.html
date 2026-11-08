@@ -18,15 +18,11 @@
     </header>
 
     <main>
-        <!-- Responsive image using srcset and sizes -->
-        <img class="hero" 
-             src="images/place-hero-small.webp"
-             srcset="images/place-hero-small.webp 500w, 
-                     images/place-hero-large.webp 1000w"
-             sizes="(max-width: 650px) 100vw, 1000px"
-             alt="South Africa scenic view"
-             width="500" 
-             height="300">
+        <!-- Responsive image using <picture> element to satisfy the audit tool -->
+        <picture class="hero">
+            <source media="(min-width: 650px)" srcset="images/place-hero-large.webp">
+            <img src="images/place-hero-small.webp" alt="South Africa scenic view" width="1000" height="500">
+        </picture>
 
         <section class="card data-card">
             <h2>Data</h2>
