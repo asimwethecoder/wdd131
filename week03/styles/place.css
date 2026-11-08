@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #007a4d;   /* South African Flag Green */
+    --secondary-color: #de3831; /* South African Flag Red */
+    --accent-color: #ffb612;    /* South African Flag Gold */
+    --dark-color: #000000;
+    --light-bg: #f4f6f8;
+    --card-bg: rgba(255, 255, 255, 0.92);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Mobile Hero Image Styling */
+.hero {
+    width: 100%;
+    display: block;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #fff;
+    background-color: var(--primary-color);
+    margin: -1.25rem -1.25rem 1rem -1.25rem;
+    padding: 0.75rem 1.25rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+.card li span:first-child {
+    font-weight: bold;
+}
+
+/* Mobile Weather SVG Icon */
+.weather-icon-mobile {
+    display: block;
+    margin: 0.5rem auto 1rem auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 5px solid var(--primary-color);
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* Wider / Desktop View Layout */
+@media screen and (min-width: 650px) {
+    main {
+        position: relative;
+        max-width: 1200px;
+        margin: 2rem auto;
+        display: block;
+    }
+
+    /* Give the hero container a fixed height so absolute cards stay contained */
+    .hero {
+        width: 100%;
+        height: 520px; 
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    /* Position Data card over the top-left of the hero image */
+    .data-card {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 320px;
+        z-index: 2;
+    }
+
+    /* Position Weather card over the bottom-right of the hero image */
+    .weather-card {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        width: 280px;
+        z-index: 2;
+    }
+
+    /* Hide mobile SVG icon in wide view */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Pseudo-element for wider view weather heading emoji */
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+    }
+}
