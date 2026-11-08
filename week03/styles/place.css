@@ -41,7 +41,7 @@ main {
     margin: 0 auto;
 }
 
-/* Mobile Hero Image Styling */
+/* Hero Image Styling */
 .hero {
     width: 100%;
     height: auto;
@@ -79,7 +79,7 @@ main {
     font-weight: bold;
 }
 
-/* Mobile Weather SVG Icon (Displayed ONLY in Mobile View) */
+/* Mobile Weather SVG Icon */
 .weather-icon-mobile {
     display: block;
     margin: 0.5rem auto 1rem auto;
@@ -100,7 +100,7 @@ footer p {
     margin: 0.25rem 0;
 }
 
-/* Wider / Desktop View Layout */
+/* Wider / Desktop View Layout with Media Query */
 @media screen and (min-width: 650px) {
     main {
         position: relative;
@@ -130,12 +130,12 @@ footer p {
         z-index: 2;
     }
 
-    /* Hide mobile SVG icon in wide view (Satisfies Criterion 5) */
+    /* Hide mobile SVG icon in desktop view */
     .weather-icon-mobile {
         display: none;
     }
 
-    /* Emoticon pseudo-element in wider view ONLY (Satisfies Criterion 6) */
+    /* Emoticon pseudo-element in wider view ONLY */
     .weather-card h2::after {
         content: " ⛅";
         font-size: 1.2rem;
