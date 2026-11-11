@@ -53,11 +53,13 @@ nav {
     left: 0;
     width: 100%;
     background-color: #1b263b;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
 }
 
 nav.open {
-    display: block;
+    visibility: visible;
 }
 
 .navigation {
@@ -72,7 +74,7 @@ nav.open {
     color: #fff;
     text-decoration: none;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #ffffff1a;
 }
 
 .navigation li a:hover,
@@ -107,7 +109,7 @@ figure {
     border-radius: 4px;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px #0000000d;
 }
 
 figure img {

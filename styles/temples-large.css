@@ -5,8 +5,9 @@
 
     nav {
         position: static;
-        display: block;
-        background-color: transparent;
+        display: flex;
+        visibility: visible;
+        background-color: #00000000;
         width: auto;
     }
 
