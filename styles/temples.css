@@ -34,13 +34,15 @@ header h1 {
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
 }
 
 #menu::before {
     content: "≡";
 }
 
-.open #menu::before {
+#menu.open::before {
     content: "✖";
 }
 
@@ -98,6 +100,8 @@ main h2 {
 }
 
 figure {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -108,11 +112,13 @@ figure {
 
 figure img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     display: block;
 }
 
 figcaption {
+    flex: 1;
     padding: 0.75rem;
     font-weight: bold;
     color: #1b263b;
