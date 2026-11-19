@@ -124,6 +124,7 @@ figcaption {
     padding: 0.75rem;
     font-weight: bold;
     color: #1b263b;
+    text-align: left;
 }
 
 /* Footer Styling */
@@ -141,10 +142,6 @@ footer p {
 }
 
 /* Temple card details */
-figcaption {
-    text-align: left;
-}
-
 figcaption h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
